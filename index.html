@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQUA Cafe | Tehran</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+
+</head>
+<body>
+    <!-- The header contains the cafe name and links to each page section. -->
+    <header id="header">
+        <nav aria-label="Main navigation">
+            <a href="#home" aria-label="AQUA Cafe home">
+                <img src="images/cafe-logo.svg" alt="AUQA LOGO" width="320" height="72">
+            </a>
+            <div class="header-actions">
+                <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode" title="Switch to dark mode">
+                    <span class="theme-toggle-icon" aria-hidden="true">&#9790;</span>
+                    <span class="theme-toggle-label" id="theme-toggle-label">Dark mode</span>
+                </button>
+            </div>
+            <div class="nav-menu" id="primary-navigation">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- The hero welcomes visitors and introduces the cafe. -->
+        <section id="home" aria-labelledby="home-title">
+            <h1 id="home-title"><span id="time-greeting">Good morning</span>, welcome to AQUA Cafe</h1>
+            <p>Your neighborhood spot for coffee and good company in Tehran.</p>
+            <a href="#contact">Get in touch</a>
+            <button class="hero-reserve-button" type="button" data-open-reservation>Reserve a table</button>
+            <div class="daily-special" role="group" aria-label="Cafe picks">
+                <div class="daily-special-content" id="daily-special-content" aria-live="polite"></div>
+                <button class="special-next" id="next-special" type="button">Show another cafe pick</button>
+            </div>
+            <figure>
+                <img src="images/cafe-interior.jpg" alt="A cafe interior with guest seating, plants, and a service counter" width="600" height="412" decoding="async">
+                <figcaption>A welcoming place to enjoy coffee in Tehran.</figcaption>
+            </figure>
+        </section>
+
+        <!-- This section tells visitors about the cafe. -->
+        <section id="about" aria-labelledby="about-title">
+            <h2 id="about-title">About Us</h2>
+            <p>AQUA Cafe is a cozy place made for slowing down and enjoying the moment. Settle into our warm, welcoming space, meet a friend over coffee, or find a quiet corner to relax. We prepare every drink and treat with care, and we love making each visit feel special.</p>
+        </section>
+
+        <!-- This section lists what visitors can enjoy at the cafe. -->
+        <section id="services" aria-labelledby="services-title">
+            <h2 id="services-title">Our Services</h2>
+            <p class="services-intro">From a slow breakfast to coffee on the go, find an easy favorite for your day.</p>
+            <div class="service-grid"></div>
+        </section>
+
+        <section id="menu" aria-labelledby="menu-title">
+            <h2 id="menu-title">Our Menu</h2>
+            <div class="menu-grid">
+                <article>
+                    <h3>Drinks</h3>
+                    <ul>
+                        <li>Espresso</li><li>Americano</li><li>Cappuccino</li><li>CaffÃ¨ latte</li>
+                        <li>Hot chocolate</li><li>English breakfast tea</li><li>Iced coffee</li><li>Fresh lemonade</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Fast Food</h3>
+                    <ul>
+                        <li>Grilled chicken sandwich</li><li>Classic cheeseburger</li><li>Margherita pizza</li>
+                        <li>Chicken wrap</li><li>French fries</li><li>Garden salad</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Pastries</h3>
+                    <ul>
+                        <li>Butter croissant</li><li>Chocolate brownie</li><li>Classic cheesecake</li>
+                        <li>Cinnamon roll</li><li>Fruit tart</li><li>Daily cake slice</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- A small gallery of the cafe's space and coffee. -->
+        <section id="gallery" aria-labelledby="gallery-title">
+            <h2 id="gallery-title">Gallery</h2>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="images/cafe-interior.jpg" alt="Cafe interior with guest seating, plants, and a service counter" width="600" height="412" loading="lazy" decoding="async">
+                    <figcaption>A welcoming corner of AQUA Cafe.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/coffee-and-pastry.jpg" alt="Two cups of coffee served with a pastry" width="600" height="390" loading="lazy" decoding="async">
+                    <figcaption>Coffee and a fresh pastry.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/birthday-celebration.jpg" alt="Birthday cake and balloons" width="600" height="400" loading="lazy" decoding="async">
+                    <figcaption>A special birthday celebration.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/friends-party.jpg" alt="Friends sharing cake at a party" width="600" height="400" loading="lazy" decoding="async">
+                    <figcaption>Good company and party treats.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/friends-cafe.jpg" alt="Friends chatting over coffee" width="600" height="400" loading="lazy" decoding="async">
+                    <figcaption>Catch up over coffee.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/cafe-pastries.jpg" alt="Fresh pastries on a cafe table" width="600" height="400" loading="lazy" decoding="async">
+                    <figcaption>Fresh cafe favorites.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- This section shares feedback from cafe visitors. -->
+        <section id="testimonials" aria-labelledby="testimonials-title">
+            <h2 id="testimonials-title">Testimonials</h2>
+            <figure>
+                <blockquote>
+                    <p>â€œA lovely, relaxing place with delicious coffee and fresh pastries. The team made us feel right at home, and we canâ€™t wait to come back.â€</p>
+                </blockquote>
+                <figcaption>— AQUA Cafe guest</figcaption>
+            </figure>
+        </section>
+
+        <!-- This section lets visitors send a message to the cafe. -->
+        <section id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact Us</h2>
+            <form id="contact-form" novalidate>
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name" required minlength="2" aria-describedby="name-error">
+                    <small class="field-error" id="name-error"></small>
+                </div>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+                    <small class="field-error" id="email-error"></small>
+                </div>
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required minlength="10" aria-describedby="message-error"></textarea>
+                    <small class="field-error" id="message-error"></small>
+                </div>
+                <button type="submit">Send message</button>
+                <p class="form-feedback" id="contact-feedback" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <dialog class="reservation-dialog" id="reservation-dialog" aria-labelledby="reservation-title">
+        <div class="dialog-heading">
+            <div>
+                <p class="eyebrow">Your table is waiting</p>
+                <h2 id="reservation-title">Make a reservation</h2>
+            </div>
+            <button class="dialog-close" type="button" aria-label="Close reservation form">&times;</button>
+        </div>
+        <p class="dialog-intro">Choose a date and time, and we’ll be ready to welcome you.</p>
+        <form id="reservation-form" novalidate>
+            <div class="reservation-fields">
+                <div class="form-field">
+                    <label for="reservation-name">Name</label>
+                    <input type="text" id="reservation-name" name="name" autocomplete="name" required minlength="2" aria-describedby="reservation-name-error">
+                    <small class="field-error" id="reservation-name-error"></small>
+                </div>
+                <div class="form-field">
+                    <label for="reservation-email">Email</label>
+                    <input type="email" id="reservation-email" name="email" autocomplete="email" required aria-describedby="reservation-email-error">
+                    <small class="field-error" id="reservation-email-error"></small>
+                </div>
+                <div class="form-field">
+                    <label for="reservation-guests">Guests</label>
+                    <select id="reservation-guests" name="guests" required>
+                        <option value="2">2 guests</option>
+                        <option value="1">1 guest</option>
+                        <option value="3">3 guests</option>
+                        <option value="4">4 guests</option>
+                        <option value="5">5 guests</option>
+                        <option value="6">6 guests</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="reservation-date">Date</label>
+                    <input type="date" id="reservation-date" name="date" required aria-describedby="reservation-date-error">
+                    <small class="field-error" id="reservation-date-error"></small>
+                </div>
+                <div class="form-field">
+                    <label for="reservation-time">Time</label>
+                    <select id="reservation-time" name="time" required>
+                        <option value="08:00">8:00 AM</option>
+                        <option value="09:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                        <option value="19:00">7:00 PM</option>
+                        <option value="20:00">8:00 PM</option>
+                        <option value="21:00">9:00 PM</option>
+                        <option value="22:00">10:00 PM</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-field">
+                <label for="reservation-notes">Special requests <span>(optional)</span></label>
+                <textarea id="reservation-notes" name="notes" rows="3" placeholder="High chair, celebration, or anything else?"></textarea>
+            </div>
+            <button class="reservation-submit" type="submit">Request a table</button>
+            <p class="form-feedback" id="reservation-feedback" role="status" aria-live="polite"></p>
+        </form>
+    </dialog>
+
+    <!-- The footer provides basic cafe and location information. -->
+    <footer id="footer">
+        <p>&copy; <span id="current-year"></span> AQUA Cafe, Tehran. All rights reserved.</p>
+        <p id="cafe-status" class="cafe-status" aria-live="polite">Open daily from 8 AM to 11 PM</p>
+    </footer>
+</body>
+</html>
