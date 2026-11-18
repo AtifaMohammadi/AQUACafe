@@ -162,6 +162,16 @@ p {
     border-radius: 48% 48% 12px 12px;
 }
 
+@media (min-width: 701px) {
+    #home figure {
+        align-self: start;
+    }
+
+    #home figure img {
+        min-height: 390px;
+    }
+}
+
 figure {
     margin: 0;
 }
